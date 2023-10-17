@@ -1,0 +1,43 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
+	..\FrameXML\UI.xsd">
+    <Script file="WSGRezTimer.lua"/>
+    <Frame name="WSGRezTimerFrame" parent="UIParent" movable="true" hidden="true">
+        <Scripts>
+            <OnLoad>
+                WSGRezTimer_OnLoad()
+                this:RegisterForDrag("LeftButton");
+				this:EnableMouse(1);
+            </OnLoad>
+            <OnUpdate>
+                WSGRezTimer_OnUpdateTimer(arg1);
+            </OnUpdate>
+            <OnEvent>
+                WSGRezTimer_OnEvent(event);
+            </OnEvent>
+            <OnDragStart>
+                this:StartMoving();
+			</OnDragStart>
+			<OnDragStop>
+				this:StopMovingOrSizing();
+			</OnDragStop>
+        </Scripts>
+        <Size>
+            <AbsDimension x="200" y="100"/>
+        </Size>
+        <Anchors>
+            <Anchor point="CENTER"/>
+        </Anchors>
+        <Layers>
+            <Layer>
+                <FontString name="WSGRezTimerDisplay" inherits="GameFontHighlight">
+                    <Size>
+                        <AbsDimension x="200" y="100"/>
+                    </Size>
+                    <Anchors>
+                        <Anchor point="CENTER"/>
+                    </Anchors>
+                </FontString>
+            </Layer>
+        </Layers>
+    </Frame>
+</Ui>
