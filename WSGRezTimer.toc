@@ -1,6 +1,6 @@
 ## Interface: 11200
-## Title: |cffFF5733WSGRezTimer|r |cffffffffv1.0|r - Urtica
+## Title: |cffFF5733WSGRezTimer|r |cffffffffv1.1|r - Urtica
 ## Notes: Displays rez intervals in WSG
 ## Author: Urtica, 2023
-## Version: 1.0
+## Version: 1.1
 WSGRezTimer.xml
